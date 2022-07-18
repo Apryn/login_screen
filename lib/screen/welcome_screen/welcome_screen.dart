@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_screen/screen/signin_screen.dart';
 import 'package:login_screen/theme.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -38,7 +39,12 @@ class WelcomeScreen extends StatelessWidget {
                       primary: Colors.white,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20))),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return SigninScreen();
+                    }));
+                  },
                   child: Text("Start Your Journey",
                       style: Theme.of(context).textTheme.button!.copyWith(
                           fontWeight: FontWeight.bold, color: Colors.black))),
